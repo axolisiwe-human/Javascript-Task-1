@@ -178,8 +178,6 @@ let attempts = 0
 let running = true
 
 do{
-    running = false;
-
     guess = prompt("Guess a number between " + minNumber + ' - ' + maxNumber + ' : ')
     guess = Number(guess)
 
