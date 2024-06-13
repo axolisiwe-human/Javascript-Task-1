@@ -154,8 +154,22 @@ do{
 }while(b <= 100)
 console.log("Sum from 1-100: " + do_sum)
 
+//5.3
+//let tries = 0
+let inputNo
+do{
+    inputNo = prompt("Enter any number greater than 10: ")
+   // tries++
 
-//Guessing game
+    if(inputNo > 10){
+        console.log("Thank you!")
+    }
+
+
+}while(inputNo <= 10)
+
+
+//5.4 Guessing game
 const minNumber = 1
 const maxNumber = 10
 const answer = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
