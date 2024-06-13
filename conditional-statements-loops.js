@@ -108,14 +108,14 @@ for(x = 0; x < numberz.length; x++){
 console.log("The largest number is " + max)
 
 //While loop
-//3.1
+//4.1
 let num = 1
 while(num <= 10){
     console.log(num)
     num++
 }
 
-//3.2
+//4.2
 num = 1
 while(num <= 20){
     if((num % 2) == 0){
@@ -123,3 +123,69 @@ while(num <= 20){
     }
     num++
 }
+
+//4.3
+let i = 0
+while(i <= 100){
+    sum += i
+    i++
+}
+console.log("Sum from 1-100: " + sum)
+
+//4.4
+
+
+//5.1 
+let a = 1
+console.log("Below are numbers from 1-10")
+do{
+    console.log(a) //print 1-10
+    a++
+
+}while(a <= 10)
+
+//5.2
+let b = 0
+let do_sum = 0
+do{
+    do_sum += b
+    b++
+
+}while(b <= 100)
+console.log("Sum from 1-100: " + do_sum)
+
+
+//Guessing game
+const minNumber = 1
+const maxNumber = 10
+const answer = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+
+let attempts = 0
+let running = true
+
+do{
+    running = false;
+
+    guess = prompt("Guess a number between " + minNumber + ' - ' + maxNumber + ' : ')
+    guess = Number(guess)
+
+    if(isNaN(guess)){
+        console.log("Please enter a valid number")
+    }
+    else if(guess < minNumber || guess > maxNumber){
+        console.log("Please enter a valid number")
+    }
+    else{
+        attempts++
+        if(guess < answer){
+            console.log("Too low! Try again")
+        }
+        else if(guess > answer){
+            console.log("Too high! Try again")
+        }
+        else{
+            console.log("Correct! The answer was " + answer + " .It took you " + attempts + " attempts.")
+        }   
+    }
+
+}while(running)
