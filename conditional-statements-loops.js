@@ -126,6 +126,7 @@ while(num <= 20){
 
 //4.3
 let i = 0
+sum = 0
 while(i <= 100){
     sum += i
     i++
@@ -197,6 +198,7 @@ do{
         }
         else{
             console.log("Correct! The answer was " + answer + " .It took you " + attempts + " attempts.")
+            running = false
         }   
     }
 
